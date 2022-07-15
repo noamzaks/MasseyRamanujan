@@ -7,7 +7,7 @@ class CachedSeries(object):
     """
 
     def __init__(self, poly_coefs, series_iterator=iter_series_items_from_compact_poly):
-        self.poly_coefs = poly_coefs
+        self.poly_coefs=poly_coefs
         self.series_iterator = series_iterator
         self.cache = []
 
@@ -16,8 +16,6 @@ class CachedSeries(object):
 
         # Calculate new items only if needed
         itered_so_far = len(self.cache)
-        for i in self.series_iterator(
-            self.poly_coefs, max_runs=max_iters, start_n=itered_so_far
-        ):
+        for i in self.series_iterator(self.poly_coefs, max_runs=max_iters, start_n=itered_so_far):
             self.cache.append(i)
             yield i
