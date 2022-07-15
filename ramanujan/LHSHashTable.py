@@ -47,7 +47,7 @@ class LHSHashTable(object):
         self.n_constants = len(constants)
 
         self.max_capacity = (search_range * 2 + 1) ** (self.n_constants * 2)
-        self.pack_format = 'll' * self.n_constants
+        self.pack_format = "ll" * self.n_constants
         self.lhs_possibilities = {}
         self.bloom = BloomFilter(capacity=self.max_capacity, error_rate=0.05)
 
