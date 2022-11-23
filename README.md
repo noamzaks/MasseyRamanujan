@@ -23,8 +23,8 @@ under the same folder as `setup.py`. That's it, you are now ready to discover ne
 
 ## The MITM_RF algorithm:
 
-The MITM algorithm will "mine" new Continued Fraction conjectures of the type:
-![LHS_RHS](images/LHS_RHS.png)
+The MITM algorithm will "mine" new Continued Fraction conjectures of the type $\textrm{LHS} = \textrm{RHS}$ where $$\textrm{LHS} = \frac{a\cdot\textrm{const}+b}{c\cdot\textrm{const}+d},\ \textrm{RHS} = a_0+\cfrac{b_0}{a_1+\cfrac{b_1}{a_2+\dots}}$$
+
 This project lets you control the equation space scanned by the algorithm.
 
 ## Running the code
